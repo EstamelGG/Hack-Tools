@@ -121,6 +121,8 @@ Follow the instructions to create the project the default language should be Swi
 git clone https://github.com/LasCC/Hack-Tools.git
 cd Hack-Tools
 npm install --force && npm run build
+# debug
+npm start
 ```
 
 Once the build is done correctly, webpack will create a new folder called **dist**
