@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Layout, Menu, Typography, theme, Button, Select, ConfigProvider, Switch } from 'antd';
-import { CopyrightCircleOutlined, FullscreenOutlined, ArrowsAltOutlined } from '@ant-design/icons';
+// import { CopyrightCircleOutlined, FullscreenOutlined, ArrowsAltOutlined } from '@ant-design/icons';
 import { createFromIconfontCN } from '@ant-design/icons';
 import { goTo } from 'react-chrome-extension-router';
 import ReverseShell from './linux/ReverseShell';
@@ -19,10 +19,11 @@ import FileTransfer from './file_transfer/File_transfer';
 import PersistedState from 'use-persisted-state';
 import MSFBuilder from './linux/MSFBuilder';
 import EchoBase64 from './file_transfer/ObfuscatedFiles';
-import Notepad from './notepad/Notepad';
+// import Notepad from './notepad/Notepad';
 
-const { Paragraph } = Typography;
-const { Sider, Content, Footer } = Layout;
+// const { Paragraph } = Typography;
+// const { Sider, Content, Footer } = Layout;
+const { Sider, Content } = Layout;
 const IconFont = createFromIconfontCN( {
     scriptUrl: [ './iconfont.js' ]
 } );
@@ -31,15 +32,16 @@ export default function LayoutApp ( props: {
     children: boolean | React.ReactFragment | React.ReactPortal | null | undefined;
 } ) {
 
-    const { defaultAlgorithm, darkAlgorithm } = theme;
-    const setDarkMode = PersistedState<boolean>( 'dark_mode' );
-    const [ darkMode, setDarkModeState ] = setDarkMode( false );
-    const handleSwtichTheme = ( value: string ) => {
-        // Set the dark mode state based on the selected value
-        // We can use the '===' operator because we know the value can only be 'dark' or 'light'.
-        const isDarkMode = value === 'dark';
-        setDarkModeState( isDarkMode );
-    }
+    // const { defaultAlgorithm, darkAlgorithm } = theme;*/
+    // const setDarkMode = PersistedState<boolean>( 'dark_mode' );*/
+    // const [ darkMode, setDarkModeState ] = setDarkMode( false );*/
+    // const handleSwtichTheme = ( value: string ) => {
+    //     // Set the dark mode state based on the selected value
+    //     // We can use the '===' operator because we know the value can only be 'dark' or 'light'.
+    //     const isDarkMode = value === 'dark';
+    //     setDarkModeState( isDarkMode );
+    // }
+
 
     interface IRouterComponent {
         key: string;
@@ -55,93 +57,83 @@ export default function LayoutApp ( props: {
             name: 'Reverse Shell',
             componentRoute: ReverseShell
         },
-        {
-            key: '2',
-            icon: <IconFont type='icon-php' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-            name: 'PHP Reverse Shell',
-            componentRoute: PhpReverseShell
-        },
-        {
-            key: '3',
-            icon: <IconFont type='icon-lvzhou_yuanchengTelnet' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-            name: 'TTY Spawn Shell',
-            componentRoute: TtySpawnShell
-        },
-        {
-            key: '4',
-            icon: <IconFont type='icon-linux' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-            name: 'Useful Linux commands',
-            componentRoute: LinuxCommands
-        },
-        {
-            key: '5',
-            icon: <IconFont type='icon-powershell' style={{ fontSize: '1.5em', marginTop: 3 }} />, name: 'PowerShell Commands',
-            componentRoute: PowershellCommands
-        },
-        {
-            key: '6',
-            icon: <IconFont type='icon-transfer' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-            name: 'Transfer Methods',
-            componentRoute: FileTransfer
-        },
-        {
-            key: '7',
-            icon: <IconFont type='icon-l-file' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-            name: 'LFI',
-            componentRoute: LFI
-        },
-        {
-            key: '8',
-            icon: <IconFont type='icon-js' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-            name: 'XSS',
-            componentRoute: XSS
-        },
-        {
-            key: '9',
-            icon: <IconFont type='icon-sql' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-            name: 'SQL Injection',
-            componentRoute: SQLi
-        },
-        {
-            key: '10',
-            icon: <IconFont type='icon-jiemaleixing' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-            name: 'Data Encoding',
-            componentRoute: Base64Encode
-        },
-        {
-            key: '11',
-            icon: <IconFont type='icon-Encode-File' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-            name: 'Obfuscated Files or Information',
-            componentRoute: EchoBase64
-        },
-        {
-            key: '12',
-            icon: <IconFont type='icon-hash' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-            name: 'Hashing',
-            componentRoute: Hashing
-        },
-        {
-            key: '13',
-            icon: <IconFont type='icon-Cloud' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-            name: 'Feed RSS',
-            componentRoute: FeedRSS
-        },
-        /* {
-            key: '13',
-            icon: (
-                <Badge dot size='default' style={{ transform: `translate(3px, 5px)` }}>
-                    <IconFont type='icon-http' style={{ fontSize: '1.5em', marginTop: 3 }} />
-                </Badge>
-            ),
-            name: 'HTTP Repeater',
-            componentRoute: HTTPUtils
-        }, */
-        {
-            key: '14',
-            icon: <IconFont type='icon-shield' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-            name: 'MSF Builder',
-            componentRoute: MSFBuilder
-        },
+        // {
+        //     key: '2',
+        //     icon: <IconFont type='icon-php' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+        //     name: 'PHP Reverse Shell',
+        //     componentRoute: PhpReverseShell
+        // },
+        // {
+        //     key: '3',
+        //     icon: <IconFont type='icon-lvzhou_yuanchengTelnet' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+        //     name: 'TTY Spawn Shell',
+        //     componentRoute: TtySpawnShell
+        // },
+        // {
+        //     key: '4',
+        //     icon: <IconFont type='icon-linux' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+        //     name: 'Useful Linux commands',
+        //     componentRoute: LinuxCommands
+        // },
+        // {
+        //     key: '5',
+        //     icon: <IconFont type='icon-powershell' style={{ fontSize: '1.5em', marginTop: 3 }} />, name: 'PowerShell Commands',
+        //     componentRoute: PowershellCommands
+        // },
+        // {
+        //     key: '6',
+        //     icon: <IconFont type='icon-transfer' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+        //     name: 'Transfer Methods',
+        //     componentRoute: FileTransfer
+        // },
+        // {
+        //     key: '7',
+        //     icon: <IconFont type='icon-l-file' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+        //     name: 'LFI',
+        //     componentRoute: LFI
+        // },
+        // {
+        //     key: '8',
+        //     icon: <IconFont type='icon-js' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+        //     name: 'XSS',
+        //     componentRoute: XSS
+        // },
+        // {
+        //     key: '9',
+        //     icon: <IconFont type='icon-sql' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+        //     name: 'SQL Injection',
+        //     componentRoute: SQLi
+        // },
+        // {
+        //     key: '10',
+        //     icon: <IconFont type='icon-jiemaleixing' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+        //     name: 'Data Encoding',
+        //     componentRoute: Base64Encode
+        // },
+        // {
+        //     key: '11',
+        //     icon: <IconFont type='icon-Encode-File' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+        //     name: 'Obfuscated Files or Information',
+        //     componentRoute: EchoBase64
+        // },
+        // {
+        //     key: '12',
+        //     icon: <IconFont type='icon-hash' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+        //     name: 'Hashing',
+        //     componentRoute: Hashing
+        // },
+        // {
+        //     key: '13',
+        //     icon: <IconFont type='icon-Cloud' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+        //     name: 'Feed RSS',
+        //     componentRoute: FeedRSS
+        // },
+        // {
+        //     key: '14',
+        //     icon: <IconFont type='icon-shield' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+        //     name: 'MSF Builder',
+        //     componentRoute: MSFBuilder
+        // },
         {
             key: '15',
             icon: <IconFont type='icon-about' style={{ fontSize: '1.5em', marginTop: 3 }} />,
@@ -163,45 +155,42 @@ export default function LayoutApp ( props: {
         goTo( componentRoute );
         setIndex( key );
     };
+    // const windowMode = () => {
+    //     const width = 1100;
+    //     const height = 800;
 
-    const windowMode = () => {
-        const width = 1100;
-        const height = 800;
-
-        chrome.windows.create( {
-            url: chrome.runtime.getURL( 'index.html' ),
-            width: width,
-            height: height,
-            type: 'popup'
-        } );
-    };
-
+    //     chrome.windows.create( {
+    //         url: chrome.runtime.getURL( 'index.html' ),
+    //         width: width,
+    //         height: height,
+    //         type: 'popup'
+    //     } );
+    // };
     useEffect( () => {
         const currentComponent = Tabs.filter( ( obj ) => obj.key === index )[ 0 ].componentRoute;
         goTo( currentComponent );
     }, [] );
 
-    const target = window.location.href;
+    // const target = window.location.href;
 
-    const handleHatClick = () => {
-        const notepad_route_ctx = {
-            key: '1',
-            name: 'Hat Clicked',
-            componentRoute: Notepad
-        }
+    // const handleHatClick = () => {
+    //     const notepad_route_ctx = {
+    //         key: '1',
+    //         name: 'Hat Clicked',
+    //         componentRoute: Notepad
+    //     }
 
-        navigate( notepad_route_ctx );
-    };
+    //     navigate( notepad_route_ctx );
+    // };
 
     return (
         <ConfigProvider
-            theme={{
-                "token": {
-                    "wireframe": true,
-                },
-                algorithm: darkMode ? darkAlgorithm : defaultAlgorithm,
-            }}
-
+            // theme={{
+            //     "token": {
+            //         "wireframe": true,
+            //     },
+            //     algorithm: darkMode ? darkAlgorithm : defaultAlgorithm,
+            // }}
         >
             <Layout style={{ minHeight: '100vh' }}>
                 <Sider
@@ -213,7 +202,7 @@ export default function LayoutApp ( props: {
                         left: 0
                     }}
                 >
-                    <div className='logo' onClick={handleHatClick}>
+                    <div className='logo' /*onClick={handleHatClick}*/>
                         <svg xmlns='http://www.w3.org/2000/svg' width='45' height='35' viewBox='0 0 134.624 80.584'>
                             <g transform='translate(-6.457 -23.8)'>
                                 <path
@@ -237,12 +226,12 @@ export default function LayoutApp ( props: {
                         overflow: 'initial',
                         minHeight: 360,
                         padding: 14,
-                        borderRadius: 8,
-                        background: darkMode ? '#0f0f0f' : '#fff',
+                        borderRadius: 8
+                        // background: darkMode ? '#0f0f0f' : '#fff',
                     }}>
                         {props.children}
                     </Content>
-                    <Footer style={{ textAlign: 'center' }}>
+                    {/* <Footer style={{ textAlign: 'center' }}>
                         <CopyrightCircleOutlined /> Hack Tools - The all in one Red team browser extension for web
                         pentesters
                         <Paragraph style={{ textAlign: 'center' }}>Ludovic COULON - Riadh BOUCHAHOUA</Paragraph>
@@ -270,7 +259,7 @@ export default function LayoutApp ( props: {
                         <Button icon={<ArrowsAltOutlined style={{ margin: 5 }} />} onClick={() => windowMode()} type='link'>
                             Pop-up mode
                         </Button>
-                    </Footer>
+                    </Footer> */}
                 </Layout>
             </Layout >
         </ConfigProvider >
