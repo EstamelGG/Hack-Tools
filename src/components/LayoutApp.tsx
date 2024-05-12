@@ -57,83 +57,83 @@ export default function LayoutApp ( props: {
             name: 'Reverse Shell',
             componentRoute: ReverseShell
         },
-        // {
-        //     key: '2',
-        //     icon: <IconFont type='icon-php' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-        //     name: 'PHP Reverse Shell',
-        //     componentRoute: PhpReverseShell
-        // },
-        // {
-        //     key: '3',
-        //     icon: <IconFont type='icon-lvzhou_yuanchengTelnet' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-        //     name: 'TTY Spawn Shell',
-        //     componentRoute: TtySpawnShell
-        // },
-        // {
-        //     key: '4',
-        //     icon: <IconFont type='icon-linux' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-        //     name: 'Useful Linux commands',
-        //     componentRoute: LinuxCommands
-        // },
-        // {
-        //     key: '5',
-        //     icon: <IconFont type='icon-powershell' style={{ fontSize: '1.5em', marginTop: 3 }} />, name: 'PowerShell Commands',
-        //     componentRoute: PowershellCommands
-        // },
-        // {
-        //     key: '6',
-        //     icon: <IconFont type='icon-transfer' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-        //     name: 'Transfer Methods',
-        //     componentRoute: FileTransfer
-        // },
-        // {
-        //     key: '7',
-        //     icon: <IconFont type='icon-l-file' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-        //     name: 'LFI',
-        //     componentRoute: LFI
-        // },
-        // {
-        //     key: '8',
-        //     icon: <IconFont type='icon-js' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-        //     name: 'XSS',
-        //     componentRoute: XSS
-        // },
-        // {
-        //     key: '9',
-        //     icon: <IconFont type='icon-sql' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-        //     name: 'SQL Injection',
-        //     componentRoute: SQLi
-        // },
-        // {
-        //     key: '10',
-        //     icon: <IconFont type='icon-jiemaleixing' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-        //     name: 'Data Encoding',
-        //     componentRoute: Base64Encode
-        // },
-        // {
-        //     key: '11',
-        //     icon: <IconFont type='icon-Encode-File' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-        //     name: 'Obfuscated Files or Information',
-        //     componentRoute: EchoBase64
-        // },
-        // {
-        //     key: '12',
-        //     icon: <IconFont type='icon-hash' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-        //     name: 'Hashing',
-        //     componentRoute: Hashing
-        // },
-        // {
-        //     key: '13',
-        //     icon: <IconFont type='icon-Cloud' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-        //     name: 'Feed RSS',
-        //     componentRoute: FeedRSS
-        // },
-        // {
-        //     key: '14',
-        //     icon: <IconFont type='icon-shield' style={{ fontSize: '1.5em', marginTop: 3 }} />,
-        //     name: 'MSF Builder',
-        //     componentRoute: MSFBuilder
-        // },
+        {
+            key: '2',
+            icon: <IconFont type='icon-php' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+            name: 'PHP Reverse Shell',
+            componentRoute: PhpReverseShell
+        },
+        {
+            key: '3',
+            icon: <IconFont type='icon-lvzhou_yuanchengTelnet' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+            name: 'TTY Spawn Shell',
+            componentRoute: TtySpawnShell
+        },
+        {
+            key: '4',
+            icon: <IconFont type='icon-linux' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+            name: 'Useful Linux commands',
+            componentRoute: LinuxCommands
+        },
+        {
+            key: '5',
+            icon: <IconFont type='icon-powershell' style={{ fontSize: '1.5em', marginTop: 3 }} />, name: 'PowerShell Commands',
+            componentRoute: PowershellCommands
+        },
+        {
+            key: '6',
+            icon: <IconFont type='icon-transfer' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+            name: 'Transfer Methods',
+            componentRoute: FileTransfer
+        },
+        {
+            key: '7',
+            icon: <IconFont type='icon-l-file' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+            name: 'LFI',
+            componentRoute: LFI
+        },
+        {
+            key: '8',
+            icon: <IconFont type='icon-js' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+            name: 'XSS',
+            componentRoute: XSS
+        },
+        {
+            key: '9',
+            icon: <IconFont type='icon-sql' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+            name: 'SQL Injection',
+            componentRoute: SQLi
+        },
+        {
+            key: '10',
+            icon: <IconFont type='icon-jiemaleixing' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+            name: 'Data Encoding',
+            componentRoute: Base64Encode
+        },
+        {
+            key: '11',
+            icon: <IconFont type='icon-Encode-File' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+            name: 'Obfuscated Files or Information',
+            componentRoute: EchoBase64
+        },
+        {
+            key: '12',
+            icon: <IconFont type='icon-hash' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+            name: 'Hashing',
+            componentRoute: Hashing
+        },
+        {
+            key: '13',
+            icon: <IconFont type='icon-Cloud' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+            name: 'Feed RSS',
+            componentRoute: FeedRSS
+        },
+        {
+            key: '14',
+            icon: <IconFont type='icon-shield' style={{ fontSize: '1.5em', marginTop: 3 }} />,
+            name: 'MSF Builder',
+            componentRoute: MSFBuilder
+        },
         {
             key: '15',
             icon: <IconFont type='icon-about' style={{ fontSize: '1.5em', marginTop: 3 }} />,
