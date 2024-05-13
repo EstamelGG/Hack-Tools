@@ -123,6 +123,7 @@ cd Hack-Tools
 npm install --force && npm run build
 # debug
 npm start
+npx webpack-dev-server
 ```
 
 Once the build is done correctly, webpack will create a new folder called **dist**
